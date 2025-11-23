@@ -65,6 +65,13 @@ a {
     padding: 0 var(--spacing-md);
 }
 
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+}
+
 /* Buttons - Timber Style */
 .btn {
     display: inline-block;
@@ -197,13 +204,13 @@ a {
 
 .main-nav a:not(.btn):hover {
     color: var(--color-accent-gold-bright);
-    text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
 }
 
 .main-nav a:not(.btn):hover::after {
     width: 100%;
     background-color: var(--color-accent-gold-bright);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
 }
 
 /* Hero */
@@ -259,7 +266,6 @@ section {
     color: var(--color-accent-gold);
     display: inline-block;
     padding: 0 2rem;
-    background: var(--color-bg-dark); /* Mask the line behind */
     position: relative;
     z-index: 1;
 }
@@ -304,6 +310,10 @@ section {
     background: linear-gradient(90deg, transparent, #3e2723, transparent);
 }
 
+.text-content {
+    padding-right: var(--spacing-md);
+}
+
 .drop-cap {
     font-size: 1.1rem;
 }
@@ -324,18 +334,34 @@ section {
     border: 2px solid #3e2723;
     text-align: left;
     position: relative;
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: space-between;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Corner Accents for Feature Box */
+.feature-col {
+    flex: 1;
+}
+
+/* Feature Box Top Accent */
 .feature-box::after {
     content: '✦';
     position: absolute;
-    top: -15px; left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background: var(--color-bg-parchment);
-    padding: 0 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #3e2723;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-accent-red);
     font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .feature-box h3 {
@@ -408,12 +434,24 @@ section {
     border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
     padding: 0.5rem 0;
     font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
 }
 
 .menu-preview li span:first-child {
     font-family: var(--font-subheading);
     font-weight: 700;
     color: var(--color-text-main);
+    flex-shrink: 0; /* Prevent name from wrapping if possible */
+}
+
+.menu-preview li span:last-child {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    text-align: right;
+    font-style: italic;
 }
 
 /* Events Section */
@@ -608,5 +646,9 @@ section {
     
     .grid-2 {
         grid-template-columns: 1fr;
+    }
+
+    .feature-box {
+        flex-direction: column;
     }
 }
