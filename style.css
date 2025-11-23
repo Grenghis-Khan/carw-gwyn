@@ -666,7 +666,7 @@ section {
 /* Footer */
 .site-footer {
     background-color: #160e0a; /* Dark warm brown */
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) 0 var(--spacing-sm) 0;
     border-top: 4px solid var(--color-bg-wood);
     position: relative;
 }
