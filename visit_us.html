@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carw Gwyn | Ancient Welsh Mead & Hall</title>
+    <title>Visit Us | Carw Gwyn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
     <header class="wood-texture">
         <div class="logo-container">
-            <img src="assets/logo.png" alt="Carw Gwyn Logo" class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="Carw Gwyn Logo" class="logo"></a>
         </div>
         <nav class="wood-texture-light">
             <ul>
@@ -26,10 +26,10 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero" style="height: 50vh;">
             <div class="hero-content">
-                <h1>Croeso i Carw Gwyn</h1>
-                <h2>Ancient Welsh Mead & Hall</h2>
+                <h1>Visit Us</h1>
+                <h2>Find Your Way to the Hall</h2>
             </div>
         </section>
 
@@ -37,26 +37,32 @@
             <div class="content-grid">
                 <div class="feature-card">
                     <div class="card-border">
-                        <h3>Our Elixirs</h3>
-                        <p>Discover our handcrafted meads, brewed from ancient Welsh recipes using the finest honey and herbs. From sweet Metheglin to dry Pyment, we have a flavor for every palate.</p>
-                        <button class="btn-wood">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Feasts & Tales</h3>
-                        <p>Join us for our nightly feasts, where bards spin tales of old and the mead flows freely. Experience the camaraderie of the hall and make memories that will last a lifetime.</p>
-                        <button class="btn-wood">Learn More</button>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Find the Stag</h3>
+                        <h3>Location</h3>
+                        <p>1509 Ancient Way<br>Cambrian Mountains, Wales</p>
                         <div class="map-container">
                             <img src="assets/map_sketch.png" alt="Map to Carw Gwyn">
                         </div>
+                        <p style="margin-top: 1rem;">Follow the old drovers' road until you see the white stag sign.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Opening Hours</h3>
+                        <p><strong>Wednesday - Sunday</strong><br>4:00 PM - Late</p>
+                        <p><strong>Monday - Tuesday</strong><br>Closed for brewing</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Contact The Keeper</h3>
+                        <form style="display: flex; flex-direction: column; gap: 1rem; text-align: left;">
+                            <input type="text" placeholder="Your Name" style="padding: 0.5rem; border: 1px solid var(--wood-dark); background: rgba(255,255,255,0.5);">
+                            <input type="email" placeholder="Your Email" style="padding: 0.5rem; border: 1px solid var(--wood-dark); background: rgba(255,255,255,0.5);">
+                            <textarea placeholder="Your Message" rows="4" style="padding: 0.5rem; border: 1px solid var(--wood-dark); background: rgba(255,255,255,0.5);"></textarea>
+                            <button type="submit" class="btn-wood">Send Raven</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -70,7 +76,7 @@
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a> <!-- Using Twitter icon for X as FontAwesome 6 might not have X yet or it's named differently -->
+                <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
