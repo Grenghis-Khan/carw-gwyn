@@ -6,6 +6,12 @@
     --text-light: #f5f5f5;
     --accent-green: #2e7d32;
     --gold: #c5a059;
+    
+    /* New Variables for Shine Effect */
+    --color-accent-gold: #ffd700;
+    --color-accent-gold-bright: #ffeb3b;
+    --color-bg-dark: #2c1810;
+    --color-timber-light: #5d4037;
 }
 
 * {
@@ -49,41 +55,44 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 20;
-    width: 150px;
-    height: 150px;
-    background-color: var(--wood-dark); /* Fallback */
-    background-image: url('assets/wood_texture.png');
-    border-radius: 0 0 50% 50%;
-    border: 4px solid var(--wood-light);
-    border-top: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
 .logo {
-    width: 120px;
-    height: auto;
+    height: 150px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 nav {
-    padding: 1rem 0;
-    margin-top: 20px; /* Space for logo overlap if needed, though logo is absolute */
-    border-top: 4px solid var(--wood-dark);
-    border-bottom: 4px solid var(--wood-dark);
+    padding: 20px 0;
+    border-bottom: 3px solid var(--wood-dark);
 }
 
 nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    list-style: none;
-    padding-top: 60px; /* Push nav items down below the logo */
+    align-items: center;
+    gap: 32px; /* Uniform gap */
+}
+
+nav ul li {
+    width: 180px; /* Fixed width for symmetry */
+    display: flex;
+    justify-content: center;
+}
+
+/* Split the navigation around the logo */
+nav ul li:nth-child(2) {
+    margin-right: 158px; /* 150px logo + 40px padding - 32px gap = 158px gap needed */
 }
 
 .nav-btn {
@@ -99,12 +108,51 @@ nav ul {
     box-shadow: 0 4px 6px rgba(0,0,0,0.4);
     transition: transform 0.2s, box-shadow 0.2s;
     text-shadow: 1px 1px 2px black;
+    position: relative;
+    overflow: hidden; /* For the shine effect */
+}
+
+/* The Shine Effect */
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.8) 50%, 
+        rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.nav-btn:hover::after {
+    left: 200%;
+    transition: all 0.7s ease;
 }
 
 .nav-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.5);
-    color: var(--gold);
+    /* background: var(--color-accent-gold); Removed to preserve wood texture */
+    color: var(--color-accent-gold-bright);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); /* Intense Gold Glow */
+    text-shadow: 0 0 10px var(--gold);
+    border-color: var(--color-accent-gold-bright);
+}
+
+.nav-btn:focus {
+    outline: none;
+}
+
+@keyframes glimmer {
+    0%, 100% { color: var(--text-light); text-shadow: 1px 1px 2px black; }
+    50% { color: var(--gold); text-shadow: 0 0 10px var(--gold), 1px 1px 2px black; }
+}
+
+@keyframes shimmer {
+    100% { left: 200%; }
 }
 
 /* Hero Section */
@@ -227,8 +275,33 @@ nav ul {
 
 .btn-wood:hover {
     transform: scale(1.05);
-    color: var(--gold);
+    color: var(--color-accent-gold-bright);
     box-shadow: 0 6px 10px rgba(0,0,0,0.5);
+}
+
+/* New Button Styles */
+.btn-primary {
+    background-color: rgba(139, 90, 43, 0.3); /* Timber tint */
+    border-color: var(--color-timber-light);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-timber-light);
+    color: var(--color-timber-light);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 215, 0, 0.15); /* Gold tint */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    border-color: var(--color-accent-gold-bright);
+    color: var(--color-accent-gold-bright);
+}
+
+.btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-width: 2px;
 }
 
 .map-container {
