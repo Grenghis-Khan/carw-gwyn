@@ -6,12 +6,23 @@
     --text-light: #f5f5f5;
     --accent-green: #2e7d32;
     --gold: #c5a059;
+    --color-accent-red: #8a2c2c; /* Deep red */
     
     /* New Variables for Shine Effect */
     --color-accent-gold: #ffd700;
     --color-accent-gold-bright: #ffeb3b;
     --color-bg-dark: #2c1810;
     --color-timber-light: #5d4037;
+
+      /* Typography */
+    --font-heading: 'MedievalSharp', cursive;
+    --font-subheading: 'Cinzel', serif;
+    --font-body: 'Lato', sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
 }
 
 * {
@@ -20,24 +31,54 @@
     box-sizing: border-box;
 }
 
+input, textarea, select {
+    font-family: var(--font-body);
+}
+
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--font-body);
     background-color: var(--wood-dark); /* Dark wood background for contrast */
-    background-image: url('assets/wood_texture.png'); /* Optional: use texture if available */
+    background-image: url('assets/light_wood_texture.png'); /* Optional: use texture if available */
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-dark);
     overflow-x: hidden;
 }
 
-h1, h2, h3, .nav-btn, .btn-wood {
-    font-family: 'Cinzel', serif;
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    /* text-transform: uppercase; */
+}
+
+h2, h3, .nav-btn, .btn-wood {
+    font-family: var(--font-subheading);
     text-transform: uppercase;
+}
+
+.text-content {
+    padding-right: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.drop-cap {
+    font-size: 1.1rem;
+}
+
+.drop-cap::first-letter {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    float: left;
+    line-height: 0.8;
+    padding-right: 0.5rem;
+    color: var(--color-accent-red);
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 }
 
 /* Textures */
 .wood-texture {
-    background-image: url('assets/wood_texture.png');
+    background-image: url('assets/light_wood_texture.png');
     background-size: cover;
     color: var(--text-light);
     border-bottom: 5px solid var(--wood-dark);
@@ -45,7 +86,7 @@ h1, h2, h3, .nav-btn, .btn-wood {
 }
 
 .wood-texture-light {
-    background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.9)), url('assets/wood_texture.png');
+    background: linear-gradient(rgba(93, 64, 55, 0.9), rgba(93, 64, 55, 0.9)), url('assets/light_wood_texture.png');
     background-size: cover;
 }
 
@@ -100,9 +141,10 @@ nav ul li {
     font-weight: 700;
     font-size: 1.1rem;
     padding: 10px 20px;
-    background-image: url('assets/wood_texture.png');
-    background-size: cover;
-    border: 2px solid var(--wood-light);
+    background-image: url('assets/light_wood_texture.png');
+    /* background-size: cover; */
+    /* border: 2px solid var(--wood-light); */
+    border: 2px solid var(--wood-dark);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.4);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -189,6 +231,33 @@ nav ul li {
     font-size: 2rem;
     color: var(--gold);
     text-shadow: 1px 1px 2px black;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: var(--accent-green);
+    display: inline-block;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+    z-index: 0;
 }
 
 /* Parchment Content */
@@ -279,7 +348,7 @@ nav ul li {
 }
 
 .btn-wood {
-    background-image: url('assets/wood_texture.png');
+    background-image: url('assets/light_wood_texture.png');
     color: var(--parchment);
     border: 2px solid var(--wood-dark);
     padding: 10px 25px;
