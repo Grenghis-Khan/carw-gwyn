@@ -66,13 +66,16 @@ h1, h2, h3, h4 {
     /* text-transform: uppercase; */
 }
 
-h2, h3, .nav-btn, .btn-wood {
+/* h2, h3, .nav-btn, .btn-wood { */
+.nav-btn, .btn-wood {
     font-family: var(--font-subheading);
     text-transform: uppercase;
 }
 
 .text-content {
-    padding-right: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding-right: var(--spacing-md); */
     margin-bottom: var(--spacing-lg);
 }
 
@@ -218,7 +221,7 @@ nav ul li {
 }
 
 .hero-content {
-    background: rgba(243, 229, 171, 0.95); /* Parchment color */
+    background-color: rgb(243 234 198 / 95%); /* Parchment color */
     padding: 2rem 4rem;
     border-radius: 10px;
     border: 3px double var(--wood-dark);
@@ -234,15 +237,16 @@ nav ul li {
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: var(--font-subheading);
     color: var(--accent-green);
     text-shadow: none;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     position: relative;
 }
 
@@ -258,7 +262,7 @@ nav ul li {
 .section-header::before {
     content: '';
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
