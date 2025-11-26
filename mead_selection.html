@@ -36,54 +36,93 @@
         </section>
 
         <section class="parchment-content">
-            <div class="content-grid">
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Traditional Mead</h3>
-                        <p>The classic honey wine. Sweet, golden, and rich with the essence of wildflowers. A timeless recipe passed down through generations.</p>
-                        <p><strong>Sweetness:</strong> Sweet <br> <strong>ABV:</strong> 14%</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Metheglin</h3>
-                        <p>A spiced mead warmed with cinnamon, cloves, and nutmeg. Perfect for cold winter nights by the fire.</p>
-                        <p><strong>Sweetness:</strong> Semi-Sweet <br> <strong>ABV:</strong> 13.5%</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Pyment</h3>
-                        <p>A harmonious blend of honey and grape juice. Combines the body of a red wine with the smoothness of mead.</p>
-                        <p><strong>Sweetness:</strong> Dry <br> <strong>ABV:</strong> 12%</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Cyser</h3>
-                        <p>Crisp apple cider meets honey mead. Refreshing, tart, and perfect for a summer feast.</p>
-                        <p><strong>Sweetness:</strong> Semi-Dry <br> <strong>ABV:</strong> 10%</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="card-border">
-                        <h3>Melomel</h3>
-                        <p>Infused with seasonal berries. Bursting with fruit flavor and a beautiful ruby color.</p>
-                        <p><strong>Sweetness:</strong> Sweet <br> <strong>ABV:</strong> 11%</p>
-                    </div>
-                </div>
+            <div class="menu-container" style="display: flex; flex-wrap: wrap; gap: 4rem; justify-content: center;">
                 
-                <div class="feature-card">
+                <!-- Drafts & Elixirs -->
+                <div class="menu-section" style="flex: 1; min-width: 300px; max-width: 600px;">
                     <div class="card-border">
-                        <h3>Bochet</h3>
-                        <p>Made from caramelized honey. Dark, complex, with notes of toffee and roasted marshmallow.</p>
-                        <p><strong>Sweetness:</strong> Sweet <br> <strong>ABV:</strong> 15%</p>
+                        <h3 style="font-size: 2rem; color: var(--color-accent-red); margin-bottom: 1rem; text-align: center; border-bottom: 2px solid var(--wood-dark); padding-bottom: 0.5rem;">Drafts & Elixirs</h3>
+                        <p style="margin-bottom: 2rem; font-style: italic; text-align: center;">Explore our 20 rotating taps of local mead, available in flights, glasses, or bottles. Also featuring crisp ciders, dark ales, and spirited concoctions.</p>
+                        
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Odin's Eye</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Dry, traditional mead</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Maiden's Blush</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Sweet, strawberry mead</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Orchard's Gold</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Crisp, dry cider</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Highland Fire</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Aged single malt whiskey</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">The Deerhound</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Vodka, mead, tart grapefruit</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 0; padding-bottom: 0; margin-top: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Black Stag Stout</h4>
+                                <span style="font-style: italic; font-size: 0.9rem;">Dark ale, notes of coffee</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- The Feast -->
+                <div class="menu-section" style="flex: 1; min-width: 300px; max-width: 600px;">
+                    <div class="card-border">
+                        <h3 style="font-size: 2rem; color: var(--color-accent-red); margin-bottom: 1rem; text-align: center; border-bottom: 2px solid var(--wood-dark); padding-bottom: 0.5rem;">The Feast</h3>
+                        <p style="margin-bottom: 2rem; font-style: italic; text-align: center;">Hearty fare to fill the belly and warm the soul.</p>
+                        
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem;">
+                                    <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Dragonfire Stew</h4>
+                                </div>
+                                <span style="font-style: italic; font-size: 0.9rem; text-align: right;">Spicy beef & root vegetable stew</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 1.5rem; border-bottom: 1px dotted var(--wood-dark); padding-bottom: 0.5rem;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem;">
+                                    <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Hunter's Plate</h4>
+                                </div>
+                                <span style="font-style: italic; font-size: 0.9rem; text-align: right;">Aged cheeses, cured meats, rustic bread</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" style="margin-bottom: 0; padding-bottom: 0; margin-top: 0;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.2rem;">
+                                    <h4 style="font-family: var(--font-heading); font-size: 1.4rem; color: var(--wood-dark); margin: 0;">Wayfarer's Pasty</h4>
+                                </div>
+                                <span style="font-style: italic; font-size: 0.9rem; text-align: right;">Beef, potato, swede, golden crust. Sourced from Pasty Republic.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
