@@ -122,6 +122,7 @@ h3 {
 .wood-texture-light {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/light_wood_texture.png');
     background-size: cover;
+    padding: 0 1rem;
 }
 
 /* Header */
@@ -197,7 +198,7 @@ nav ul li {
     color: var(--parchment);
     font-weight: 700;
     font-size: 1.1rem;
-    padding: 12px 0; /* Vertical padding only, width handles horizontal */
+    padding: 12px 10px; /* Vertical padding only, width handles horizontal */
     width: 100%; /* Fill the li container */
     display: inline-block; /* Allow width to take effect */
     text-align: center; /* Center text */
@@ -688,6 +689,46 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    /* Tablet / Small Laptop Adjustments */
+    
+    /* Compact Navigation */
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li {
+        width: 160px; /* Reduce width from 200px */
+    }
+
+    .nav-btn {
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
+
+    /* Hero Scaling */
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    /* Content Spacing */
+    .parchment-content {
+        padding: 3rem 2rem;
+    }
+
+    .content-grid {
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
         height: auto;
@@ -772,6 +813,7 @@ footer {
         z-index: 15;
         border-bottom: 3px solid var(--wood-dark);
         box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        gap: 1.25rem;
         
         /* Animation properties */
         max-height: 0;
@@ -786,6 +828,15 @@ footer {
         opacity: 1;
         padding: 2rem 0; /* Restore padding when active */
         height: calc(100vh - 100%); /* Extend to bottom of screen */
+    }
+
+    nav ul li {
+        width: 200px;
+        height: 65px;
+    }
+
+    .nav-btn {
+        align-content: center;
     }
 
     .hamburger {
