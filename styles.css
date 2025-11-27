@@ -258,8 +258,9 @@ nav ul li {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/hero_bg.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-height: 80vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -719,6 +720,16 @@ footer {
         padding: 2rem 1rem;
     }
 
+    /* Fix Hero Background on Tablet */
+    .hero {
+        background-attachment: scroll;
+        background-size: 180% auto;
+    }
+
+    .hero-small {
+        background-size: 160% auto;
+    }
+
     /* Content Spacing */
     .parchment-content {
         padding: 3rem 2rem;
@@ -735,11 +746,14 @@ footer {
         min-height: 80vh;
         padding: 6rem 1rem 4rem 1rem; /* Add padding to prevent content touching edges, account for header */
         align-items: center;
+        background-attachment: scroll;
+        background-size: 275% auto;
     }
 
     .hero-small {
         height: auto;
         min-height: 50vh;
+        background-size: 175% auto;
     }
 
     .hero-content {
