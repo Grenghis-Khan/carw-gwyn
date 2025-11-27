@@ -693,7 +693,8 @@ footer {
         margin-top: 0;
         width: 100%;
         max-width: 400px;
-        background-color: rgba(243, 229, 171, 0.85); /* Slightly more opaque for readability on mobile */
+        /*background-color: rgba(243, 229, 171, 0.85);/* /* Slightly more opaque for readability on mobile */
+        background-color: rgb(255 248 221 / 90%);
     }
 
     .hero h1 {
