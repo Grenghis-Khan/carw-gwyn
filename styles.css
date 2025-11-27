@@ -257,7 +257,8 @@ height: 80vh;
 }
 
 .hero-content {
-    background-color: rgba(243, 229, 171, 0.7); /* Parchment color with 70% opacity */
+    /* background-color: rgba(243, 229, 171, 0.7); */ /* Parchment color with 70% opacity */
+    background-color: rgb(255 248 221 / 90%);
     padding: 2rem 4rem;
     border-radius: 10px;
     border: 3px double var(--wood-dark);
@@ -341,12 +342,16 @@ height: 80vh;
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: stretch;
 }
 
 .feature-card {
     background: transparent;
     padding: 1rem;
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-border {
@@ -392,6 +397,12 @@ height: 80vh;
 .card-border > :last-child {
     margin-top: auto;
 }
+
+.menu-section .card-border > :last-child {
+    margin-top: 0;
+}
+
+
 
 .feature-card h3 {
     font-size: 1.8rem;
@@ -561,6 +572,37 @@ height: 80vh;
     margin-bottom: 0;
 }
 
+/* Menu Item Grid Layout */
+.menu-item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px dotted var(--wood-dark);
+    padding-bottom: 0.5rem;
+}
+
+.menu-item-grid:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.menu-item-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--wood-dark);
+    margin: 0;
+    text-align: left;
+}
+
+.menu-item-desc {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: right;
+    color: var(--text-dark);
+}
+
 .location-link {
     color: var(--text-dark);
     text-decoration: none;
@@ -666,6 +708,11 @@ footer {
         line-height: 1.4;
     }
 
+    .section-header h2 {
+        font-size: 1.8rem;
+        word-wrap: break-word;
+    }
+
     .btn-cta {
         padding: 0.8rem 1.5rem; /* Smaller button padding */
         font-size: 1rem; /* Smaller button text */
@@ -761,6 +808,10 @@ footer {
        For now, let's style the UL to be the dropdown.
     */
 
+    .parchment-content{
+        padding: 2rem 1rem;
+    }
+
     .footer-content {
         flex-direction: column;
         gap: 1.5rem;
@@ -769,4 +820,47 @@ footer {
     .info-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Mead Selection Mobile Adjustments */
+    .mead-menu-container {
+        gap: 2rem; /* Reduce gap on mobile */
+    }
+}
+
+/* Mead Selection Styles */
+.mead-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.mead-menu-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.mead-header-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--wood-dark);
+}
+
+.mead-section-title {
+    font-size: 2rem;
+    color: var(--color-accent-red);
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--wood-dark);
+    padding-bottom: 0.5rem;
+}
+
+.mead-section-desc {
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-align: center;
 }
