@@ -13,6 +13,12 @@
 <body>
     <header class="wood-texture">
         <nav class="wood-texture-light">
+            <a href="index.html" class="mobile-logo-link">
+                <img src="assets/logo.png" alt="Carw Gwyn Logo">
+            </a>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul>
                 <li><a href="mead_selection.html" class="nav-btn">Elixirs & Feasts</a></li>
                 <li><a href="events.html" class="nav-btn">Gatherings</a></li>
@@ -28,7 +34,7 @@
     </header>
 
     <main>
-        <section class="hero" style="height: 50vh;">
+        <section class="hero hero-small">
             <div class="hero-content">
                 <h1>The Great Hall</h1>
                 <h2>A Place of Legend</h2>
@@ -40,7 +46,9 @@
                 <div class="card-border">
                     <div class="section-header">
                         <h2>A Sanctuary from the Modern World</h2>
-                        <div class="divider">♦</div>
+                        <div class="divider">
+                            <img src="assets/the_hall_header.png" alt="The Great Hall" style="width: 100%; max-width: 800px; height: 300px; object-fit: cover; border-radius: 10px; border: 2px solid var(--wood-dark); margin-bottom: 1rem;">
+                        </div>
                     </div>
                     <div class="text-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
                         <p class="drop-cap" style="text-align: left; margin-bottom: 1.5rem;">In Welsh mythology, the <em>Carw Gwyn</em> (pronounced “ca-roo gwinn”, White Stag) is a messenger from the Otherworld—a sign that one is ready to embark on a spiritual quest. Here in the heart of Denver, your journey leads you to us.</p>
@@ -89,5 +97,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

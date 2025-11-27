@@ -66,6 +66,10 @@ h1, h2, h3, h4 {
     /* text-transform: uppercase; */
 }
 
+h3 {
+    color: var(--color-accent-red);
+}
+
 /* h2, h3, .nav-btn, .btn-wood { */
 .nav-btn, .btn-wood {
     font-family: var(--font-subheading);
@@ -131,6 +135,29 @@ header {
 nav {
     padding: 8px 0 0 0;
     border-bottom: 3px solid var(--wood-dark);
+    position: relative; /* Ensure positioning context for mobile menu */
+}
+
+.mobile-logo-link {
+    display: none; /* Hidden on desktop */
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: var(--wood-dark);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    /* Positioned absolutely on desktop/default if needed, but we'll use flex on mobile */
+    z-index: 20;
+}
+
+.hamburger:hover {
+    color: var(--gold);
+    filter: drop-shadow(0 0 10px var(--gold));
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -230,12 +257,11 @@ height: 80vh;
 }
 
 .hero-content {
-    background-color: rgb(243 234 198 / 95%); /* Parchment color */
+    background-color: rgba(243, 229, 171, 0.7); /* Parchment color with 70% opacity */
     padding: 2rem 4rem;
     border-radius: 10px;
     border: 3px double var(--wood-dark);
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    corner-shape: notch;
 }
 
 .hero h1 {
@@ -281,10 +307,16 @@ height: 80vh;
 }
 
 .divider {
-    font-size: 2rem;
-    color: var(--color-accent-red);
     margin-top: 0.5rem;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.divider img {
+    width: 60px; /* Adjust size as needed */
+    height: auto;
+    display: inline-block;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
+    margin-top: 1rem;
 }
 
 /* Parchment Content */
@@ -364,7 +396,7 @@ height: 80vh;
 .feature-card h3 {
     font-size: 1.8rem;
     margin: 0 auto 1rem auto;
-    color: var(--wood-dark);
+    /* color: var(--wood-dark); */
     border-bottom: 2px solid var(--wood-dark);
     padding-bottom: 0.5rem;
     display: flex;
@@ -602,25 +634,136 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 80vh;
+        padding: 6rem 1rem 4rem 1rem; /* Add padding to prevent content touching edges, account for header */
+        align-items: center;
+    }
+
+    .hero-small {
+        height: auto;
+        min-height: 50vh;
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem;
+        margin-top: 0;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(243, 229, 171, 0.85); /* Slightly more opaque for readability on mobile */
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Smaller h1 */
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem; /* Smaller h2 */
+        margin-bottom: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .btn-cta {
+        padding: 0.8rem 1.5rem; /* Smaller button padding */
+        font-size: 1rem; /* Smaller button text */
+        margin-top: 0.5rem;
+        width: 100%; /* Full width on mobile */
+        max-width: 280px; /* But not too wide */
+    }
+
+    .cta-container {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center;
+        width: 100%;
     }
     
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .mobile-logo-link {
+        display: block;
+    }
+
+    .mobile-logo-link img {
+        height: 60px; /* Adjust size as needed */
+        width: auto;
+    }
+
     nav ul {
+        display: flex; /* Always flex, hide with max-height */
         flex-direction: column;
         align-items: center;
-        padding-top: 20px;
-        gap: 1rem;
+        width: 100%;
+        background: var(--wood-dark); /* Dark wood background */
+        /* background-image: url('assets/wood_pattern.png'); Optional: if we want texture */
+        padding: 0; /* Reset padding for animation */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 15;
+        border-bottom: 3px solid var(--wood-dark);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        
+        /* Animation properties */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease;
+    }
+
+    nav ul.active {
+        /* display: flex; Removed as it's always flex now */
+        max-height: 100vh; /* Allow it to grow to full height */
+        opacity: 1;
+        padding: 2rem 0; /* Restore padding when active */
+        height: calc(100vh - 100%); /* Extend to bottom of screen */
+    }
+
+    .hamburger {
+        display: block; /* Visible on mobile */
+        position: static; /* Reset absolute positioning */
+        transform: none;
     }
 
     .nav-logo {
-        order: -1;
-        margin-bottom: 1rem;
+        display: none; /* Hide the list-item logo on mobile */
     }
+    
+    /* Hide logo in the menu list if it's duplicated, or adjust layout */
+    /* In this structure, the logo is a list item. We might want to hide it inside the dropdown 
+       and show a separate one in the bar, OR keep it as the top item. 
+       Let's keep it simple: The logo is part of the list. 
+       If we want a persistent logo bar, we'd need to restructure HTML.
+       For now, let's just let the menu drop down. 
+       BUT, the hamburger is in 'nav', and 'nav ul' is the menu.
+       If 'nav ul' is hidden, the logo (which is an li) is hidden.
+       We need a visible logo on the bar.
+       
+       Refining plan: 
+       The current HTML has the logo INSIDE the UL.
+       To have a persistent logo on mobile + hamburger, we need to move the logo OUT of the UL 
+       or duplicate it, OR make the UL not cover the whole bar.
+       
+       Given the constraints, I will modify the CSS to handle the existing structure best:
+       The 'nav' bar will just contain the hamburger.
+       When clicked, the menu (with logo) drops down.
+       
+       Actually, a better UX is to have a logo visible on the bar always.
+       I will add a mobile-only logo outside the UL in the HTML updates.
+       For now, let's style the UL to be the dropdown.
+    */
 
     .footer-content {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .info-grid {
