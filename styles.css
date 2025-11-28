@@ -254,8 +254,7 @@ nav ul li {
 
 /* Hero Section */
 .hero {
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/hero_bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -273,27 +272,29 @@ nav ul li {
 }
 
 .hero-content {
-    /* background-color: rgba(243, 229, 171, 0.7); */ /* Parchment color with 70% opacity */
-    background-color: rgb(255 248 221 / 90%);
+    background-color: transparent;
     padding: 2rem 4rem;
-    border-radius: 10px;
-    border: 3px double var(--wood-dark);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    max-width: 1000px; /* Allow more width for the cinematic text */
 }
 
 .hero h1 {
-    font-size: 4rem;
-    color: var(--wood-dark);
-    text-shadow: none;
+    font-size: 5rem; /* Larger for impact */
+    color: var(--parchment);
+    text-shadow: 0 0 20px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,1);
     margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
 .hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: var(--font-subheading);
-    color: var(--accent-green);
-    text-shadow: none;
-    /* font-weight: 700; */
+    color: var(--color-accent-gold);
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    letter-spacing: 0.1em;
+    font-weight: 700;
 }
 
 .section-header {
@@ -718,6 +719,9 @@ footer {
 
     .hero-content {
         padding: 2rem 1rem;
+        background-color: transparent; /* Ensure no background on tablet */
+        border: none;
+        box-shadow: none;
     }
 
     /* Fix Hero Background on Tablet */
@@ -760,19 +764,20 @@ footer {
         padding: 1.5rem 1rem;
         margin-top: 0;
         width: 100%;
-        max-width: 400px;
-        /*background-color: rgba(243, 229, 171, 0.85);/* /* Slightly more opaque for readability on mobile */
-        background-color: rgb(255 248 221 / 90%);
+        max-width: 100%; /* Allow full width */
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
     }
 
     .hero h1 {
-        font-size: 2rem; /* Smaller h1 */
+        font-size: 3rem; /* Good size for mobile cinematic */
         margin-bottom: 0.5rem;
         line-height: 1.2;
     }
 
     .hero h2 {
-        font-size: 1.1rem; /* Smaller h2 */
+        font-size: 1.3rem; /* Balanced with h1 */
         margin-bottom: 1.2rem;
         line-height: 1.4;
     }
