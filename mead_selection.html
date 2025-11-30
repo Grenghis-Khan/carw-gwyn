@@ -20,7 +20,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul>
-                <li><a href="mead_selection.html" class="nav-btn">Provisions</a></li>
+                <li><a href="mead_selection.html" class="nav-btn active">Provisions</a></li>
                 <li><a href="events.html" class="nav-btn">Gatherings</a></li>
                 <li class="nav-logo">
                     <a href="index.html">
@@ -34,79 +34,309 @@
     </header>
 
     <main>
-        <section class="hero hero-small">
+        <!-- Hero Section with Fantasy Illustration -->
+        <section class="hero" style="min-height: 60vh; background: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.9)), url('assets/mead_selection_hero.png'); background-size: cover; background-position: center;">
             <div class="hero-content">
-                <h1>Our Provisions</h1>
-                <h2>Elixirs & Feasts</h2>
+                <h1>The Alchemist's Reserve</h1>
+                <h2>Golden Elixirs & Ancient Recipes</h2>
             </div>
         </section>
 
         <section class="parchment-content">
-            <div class="menu-container mead-menu-container">
-                
-                <!-- Elixirs -->
-                <div class="menu-section mead-menu-section">
+            <div class="text-content" style="margin-bottom: 3rem;">
+                <p class="drop-cap">Our cellar runs deep. We feature <strong>20 rotating taps</strong> of the finest local meads, alongside a curated selection of spirits and ales for every traveler's taste.</p>
+            </div>
+
+            <!-- Sub-Navigation Menu -->
+            <nav class="sticky-sub-nav">
+                <a href="#mead-hall">The Mead Hall</a>
+                <span style="color: var(--color-accent-gold);">•</span>
+                <a href="#taproom">The Taproom</a>
+                <span style="color: var(--color-accent-gold);">•</span>
+                <a href="#hearth">The Hearth</a>
+            </nav>
+
+            <!-- Section Divider: The Mead Hall -->
+            <div id="mead-hall" class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+                <h2>The Mead Hall</h2>
+                <div class="divider">
+                    <span class="knot-left"></span>
+                    <span class="knot-center"></span>
+                    <span class="knot-right"></span>
+                </div>
+                <p class="section-subtitle">"From the Hive to the Horn"</p>
+            </div>
+            <div class="content-grid">
+                <!-- Category: Traditional & Dry -->
+                <div class="feature-card">
                     <div class="card-border">
-                        <img src="assets/elixirs_header.png" alt="Elixirs Selection" class="mead-header-img">
-                        <h3 class="mead-section-title">Elixirs</h3>
-                        <p class="mead-section-desc">Explore our 20 rotating taps of local mead, available in flights, glasses, or bottles. Also featuring crisp ciders, dark ales, and spirited concoctions.</p>
+                        <h3>Traditional & Dry</h3>
+                        <p class="card-subtitle">"The Purest Gold"</p>
                         
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Odin's Eye</h4>
-                            <span class="menu-item-desc">Dry, traditional mead</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Odin's Eye</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">12%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Crisp, dry, wildflower honey.</p>
                         </div>
 
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Maiden's Blush</h4>
-                            <span class="menu-item-desc">Sweet, strawberry mead</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Golden Shield</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">14%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Semi-dry, oak-aged, robust.</p>
                         </div>
 
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Orchard's Gold</h4>
-                            <span class="menu-item-desc">Crisp, dry cider</span>
-                        </div>
-
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Highland Fire</h4>
-                            <span class="menu-item-desc">Aged single malt whiskey</span>
-                        </div>
-
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">The Deerhound</h4>
-                            <span class="menu-item-desc">Vodka, mead, tart grapefruit</span>
-                        </div>
-
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Black Stag Stout</h4>
-                            <span class="menu-item-desc">Dark ale, notes of coffee</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Sunlight</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">10%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Light, effervescent, session mead.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- The Feast -->
-                <div class="menu-section mead-menu-section">
+                <!-- Category: Fruit & Melomels -->
+                <div class="feature-card">
                     <div class="card-border">
-                        <img src="assets/feast_header.png" alt="The Feast" class="mead-header-img">
-                        <h3 class="mead-section-title">The Feast</h3>
-                        <p class="mead-section-desc">Hearty fare to fill the belly and warm the soul.</p>
+                        <h3>Fruit & Melomels</h3>
+                        <p class="card-subtitle">"The Forest's Gift"</p>
                         
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Dragonfire Stew</h4>
-                            <span class="menu-item-desc">Spicy beef & root vegetable stew</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Blackberry Bramble</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">13%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Tart blackberries, hint of vanilla.</p>
                         </div>
 
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Hunter's Plate</h4>
-                            <span class="menu-item-desc">Aged cheeses, cured meats, rustic bread</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Maiden's Blush</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">11%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Sweet strawberries, creamy finish.</p>
                         </div>
 
-                        <div class="menu-item-grid">
-                            <h4 class="menu-item-name">Wayfarer's Pasty</h4>
-                            <span class="menu-item-desc">Beef, potato, swede, golden crust. Sourced from Pasty Republic.</span>
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Dark Cherry</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">14%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Rich black cherries, deep red.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Category: Spiced & Metheglins -->
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Spiced & Metheglins</h3>
+                        <p class="card-subtitle">"Hearth in a Glass"</p>
+                        
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Winter Spice</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">14%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Cinnamon, clove, orange peel.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Vanilla Bean</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">12%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Madagascar vanilla, smooth oak.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Earl Grey</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">11%</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Black tea, bergamot, lavender.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Divider: The Taproom -->
+            <div id="taproom" class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+                <h2>The Taproom</h2>
+                <div class="divider">
+                    <span class="knot-left"></span>
+                    <span class="knot-center"></span>
+                    <span class="knot-right"></span>
+                </div>
+                <p class="section-subtitle">"Spirits, Ciders & Ales"</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Category: Spirits & Cocktails -->
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Spirits & Cocktails</h3>
+                        <p class="card-subtitle">"Stronger Waters"</p>
+                        
+                        <!-- List Item: The Deerhound (Highlighted) -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem; background: rgba(255, 193, 7, 0.1); padding: 0.5rem; border-radius: 4px; border: 1px solid var(--color-accent-gold);">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">The Deerhound</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Signature</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Vodka, house mead, tart grapefruit.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Highland Fire</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Whiskey</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Aged single malt, smoky finish.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">The Green Knight</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Gin</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Botanical gin, fresh basil, lime.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Ciders -->
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Ciders</h3>
+                        <p class="card-subtitle">"Orchard's Bounty"</p>
+                        
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Orchard's Gold</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Dry</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Crisp, traditional dry cider.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Crimson Crisp</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Semi-Sweet</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Blood orange and apple blend.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Spiced Pear</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Perry</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Pear cider with cardamom and clove.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Ales & Lagers -->
+                <div class="feature-card">
+                    <div class="card-border">
+                        <h3>Ales & Lagers</h3>
+                        <p class="card-subtitle">"Grain & Hop"</p>
+                        
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Black Stag Stout</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Stout</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Dark roasted malts, coffee notes.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Ironclad Red</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Red Ale</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Malty, caramel, slight hop bite.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Golden Hind</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Lager</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Crisp, light, refreshing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Divider -->
+            <div id="hearth" class="section-header" style="margin-top: 4rem; margin-bottom: 2rem;">
+                <h2>The Hearth</h2>
+                <div class="divider">
+                    <span class="knot-left"></span>
+                    <span class="knot-center"></span>
+                    <span class="knot-right"></span>
+                </div>
+                <p style="max-width: 600px; margin: 0 auto;">Hearty fare to fill the belly and warm the soul.</p>
+            </div>
+
+            <div class="content-grid">
+                <!-- Food Category: Feasts -->
+                <div class="feature-card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto;">
+                    <div class="card-border">
+                        <h3>Rustic Feasts</h3>
+                        <p class="card-subtitle">"Fit for a King"</p>
+                        
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Dragonfire Stew</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Spicy</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Slow-cooked beef, root vegetables, spicy broth.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 1rem; border-bottom: 1px dashed rgba(139, 69, 19, 0.3); padding-bottom: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Hunter's Plate</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Shareable</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Aged cheddar, cured meats, pickles, mustard.</p>
+                        </div>
+
+                        <!-- List Item -->
+                        <div style="text-align: left; margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                                <h4 style="margin: 0; color: var(--wood-dark); font-size: 1.1rem;">Wayfarer's Pasty</h4>
+                                <span style="font-size: 0.9rem; font-weight: bold;">Local</span>
+                            </div>
+                            <p style="margin: 0; font-size: 0.9rem; font-style: italic;">Beef, potato, swede, golden crust.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
