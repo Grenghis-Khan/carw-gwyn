@@ -697,30 +697,82 @@ nav ul li {
     border-bottom-style: solid;
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+}
+
+.phone-link {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-bottom: 1px dotted var(--wood-dark);
+}
+
+.phone-link:hover {
+    color: var(--color-accent-red);
+    border-bottom-style: solid;
+}
+
 /* Footer */
 footer {
     background-color: var(--wood-dark);
     color: var(--parchment);
     padding: 2rem 1.5rem;
     text-align: center;
-    border-top: 5px solid #2c1810; /* Darker border */
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    border-top: 4px solid var(--color-accent-gold-dark); /* Gold border */
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.5); /* Shadow for depth */
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     font-size: 1.1rem;
     font-family: var(--font-subheading);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.location {
+.footer-main {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; /* Ensure centering if needed */
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section.left {
+    justify-content: flex-start;
+}
+
+.footer-section.center {
+    justify-content: center;
+}
+
+.footer-section.right {
+    justify-content: flex-end;
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid rgba(243, 229, 171, 0.2); /* Subtle separator */
+    padding-top: 1rem;
+    font-size: 0.9rem;
+    color: rgba(243, 229, 171, 0.8);
 }
 
 .footer-address {
@@ -730,7 +782,7 @@ footer {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    text-align: left; /* Ensure multi-line text aligns left next to icon */
+    text-align: left;
 }
 
 .footer-address:hover, .footer-address:focus {
@@ -753,6 +805,20 @@ footer {
     color: var(--color-accent-gold);
     transform: translateY(-2px);
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-section.left,
+    .footer-section.center,
+    .footer-section.right {
+        justify-content: center;
+    }
 }
 
 /* Responsive */

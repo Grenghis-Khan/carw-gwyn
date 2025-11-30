@@ -10,10 +10,10 @@ I've reviewed the website in the browser and analyzed the code. Here is my criti
 
 **Areas for Improvement:**
 
-1. **Hero Section "Boxiness":**
+1. **Hero Section "Boxiness" (COMPLETE):**
     - **Issue:** The text in the hero section is contained in a rectangular box ( ```.hero-content``` ) with a double border. While readable, it feels a bit rigid and "digital" compared to the organic, rustic vibe of the rest of the site.
     - **Suggestion:** We could make this feel more like a **real scroll or parchment** by using a CSS ```clip-path``` to give it ragged edges, or by using a border-image that looks like an ornate frame. Alternatively, we could ditch the box entirely for a more cinematic look: a full-width dark overlay on the background image with light text floating directly on top.
-2. **"Mead Selection" Visuals:**
+2. **"Mead Selection" Visuals (COMPLETE):**
     - **Issue:** The subagent noted this page is text-heavy. A mead hall is about the _senses_—color, clarity, foam. A simple text list doesn't capture the appetite.
     - **Suggestion:** Introduce a **"Featured Mead" spotlight** at the top with a placeholder for a rich, golden liquid image. Use icons (e.g., a honey pot, an apple, a hop cone) to categorize the drinks visually.
 3. **"Visit Us" Page Depth:**
