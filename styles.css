@@ -7,9 +7,9 @@
     --gold: #c5a059;
     --color-accent-red: #8a2c2c; /* Deep red */
     
-    /* New Variables for Shine Effect */
-    --color-accent-gold: #ffd700;
-    --color-accent-gold-bright: #ffeb3b;
+    /* New Variables for Shine Effect (Honey Mead Theme) */
+    --color-accent-gold: #ffc107; /* Warm Amber Honey */
+    --color-accent-gold-bright: #ffca28; /* Lighter Honey */
     --color-bg-dark: #2c1810;
     --color-timber-light: #5d4037;
 
@@ -282,19 +282,24 @@ nav ul li {
 
 .hero h1 {
     font-size: 5rem; /* Larger for impact */
-    color: var(--parchment);
-    text-shadow: 0 0 20px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,1);
+    background: linear-gradient(to bottom, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Fallback handled by background-clip */
+    filter: drop-shadow(0 2px 0px rgba(0,0,0,0.5)) drop-shadow(0 0 10px rgba(0,0,0,0.8));
     margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
 }
 
 .hero h2 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced from 2rem */
     font-family: var(--font-subheading);
-    color: var(--color-accent-gold);
-    text-shadow: 0 0 10px rgba(0,0,0,0.8);
-    letter-spacing: 0.1em;
-    font-weight: 700;
+    color: #F0E68C; /* Solid Pale Gold */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(240, 230, 140, 0.4);
+    letter-spacing: 0.2em;
+    font-weight: 400; /* Reduced from 700 */
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
 .section-header {
@@ -442,31 +447,42 @@ nav ul li {
     color: var(--text-dark);
 }
 
+/* Tertiary Button - "The Cask & Honey" Style (3D Depth) */
 .btn-wood {
-    /* background-image: url('assets/button_iron_oak.png'); */
-    /* background-size: 100% 100%; */
-    background: linear-gradient(to bottom, #5d4037, #3e2723);
-    color: var(--parchment);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
-    border: 3px solid #2c2c2c;
-    padding: 10px 25px;
-    font-size: 1rem;
+    background: linear-gradient(to bottom, var(--wood-light), var(--wood-dark)); /* 3D Curve */
+    color: var(--color-accent-gold);
+    border: 2px solid var(--color-accent-gold); /* Thicker Rim */
+    padding: 1rem 2rem;
+    font-family: var(--font-subheading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    width: 175px;
+    box-shadow: 
+        inset 0 0 10px rgba(0,0,0,0.6), /* Inner Depth */
+        0 4px 6px rgba(0,0,0,0.3); /* Drop Shadow */
+    width: auto;
+    min-width: 160px;
     align-self: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* Etched Text */
 }
 
 .btn-wood:hover {
-    transform: scale(1.05);
-    color: #ffb300;
-    text-shadow: 0 0 5px rgba(0,0,0,1), 0 0 10px #ffb300;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transform: translateY(-2px);
+    background: linear-gradient(to bottom, #6d4c41, #4e342e); /* Slightly Lighter */
+    color: var(--color-accent-gold-bright);
+    border-color: var(--color-accent-gold-bright);
+    box-shadow: 
+        inset 0 0 10px rgba(0,0,0,0.6),
+        0 0 15px rgba(255, 193, 7, 0.4); /* Honey Glow */
 }
 
-/* Primary CTA Button - Iron & Oak Style */
+
+/* Primary CTA Button - Solid Gold (High Emphasis) */
+/* Primary CTA Button - "The Gold Ingot" (3D Solid) */
 .btn-cta {
     display: inline-block;
     margin-top: 1.5rem;
@@ -476,47 +492,49 @@ nav ul li {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--parchment);
-    background: linear-gradient(to bottom, #4e342e, #271c19); /* Darker wood/iron base */
-    border: 3px solid #2c2c2c; /* Iron border */
+    color: var(--wood-dark); /* Dark Text for contrast on Gold */
+    background: linear-gradient(to bottom, var(--color-accent-gold-bright), var(--color-accent-gold)); /* 3D Gold */
+    border: 1px solid #e0a800; /* Darker Gold Rim */
     border-radius: 4px;
     box-shadow: 
-        inset 0 0 15px rgba(0,0,0,0.9),
-        0 6px 10px rgba(0,0,0,0.5);
+        inset 0 1px 0 rgba(255,255,255,0.5), /* Top Highlight */
+        inset 0 -2px 0 rgba(0,0,0,0.1), /* Bottom Shade */
+        0 4px 15px rgba(255, 193, 7, 0.4); /* Glow */
     transition: all 0.3s ease;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4); /* Engraved Light */
     position: relative;
     overflow: hidden;
+    z-index: 1;
 }
 
-.btn-cta::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, 
-        rgba(255,215,0,0) 0%, 
-        rgba(255,215,0,0.4) 50%, 
-        rgba(255,215,0,0) 100%); /* Gold shine */
-    transform: skewX(-25deg);
-    transition: none;
-}
-
-.btn-cta:hover::after {
-    left: 200%;
-    transition: all 0.7s ease;
-}
-
+/* Hover State for Primary */
 .btn-cta:hover {
-    transform: scale(1.05);
-    color: #ffb300; /* Gold text */
-    border-color: #5d4037;
+    transform: translateY(-2px);
+    background: linear-gradient(to bottom, #fff176, #ffd54f); /* Brighter Ingot */
+    border-color: #ffca28;
     box-shadow: 
-        0 0 25px rgba(255, 179, 0, 0.3), /* Amber Glow */
-        0 8px 20px rgba(0,0,0,0.6);
-    text-shadow: 0 0 8px rgba(255, 179, 0, 0.6);
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 0 25px rgba(255, 215, 0, 0.6),
+        0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Secondary CTA Button - Ghost Style (Lower Emphasis) */
+/* Secondary CTA Button - "The Crystal Pane" (3D Ghost) */
+.btn-cta-secondary {
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.05), rgba(255, 215, 0, 0.15)); /* Subtle Glass */
+    color: var(--color-accent-gold);
+    border: 2px solid var(--color-accent-gold);
+    box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1); /* Inner Depth */
+}
+
+/* Hover State for Secondary */
+.btn-cta-secondary:hover {
+    background: linear-gradient(to bottom, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.25));
+    color: var(--color-accent-gold-bright);
+    border-color: var(--color-accent-gold-bright);
+    box-shadow: 
+        inset 0 0 15px rgba(255, 215, 0, 0.3), /* Stronger Inner Glow */
+        0 0 20px rgba(255, 215, 0, 0.2); /* Outer Glow */
 }
 
 .cta-container {
@@ -777,7 +795,7 @@ footer {
     }
 
     .hero h2 {
-        font-size: 1.3rem; /* Balanced with h1 */
+        font-size: 1.1rem; /* Reduced from 1.3rem */
         margin-bottom: 1.2rem;
         line-height: 1.4;
     }
