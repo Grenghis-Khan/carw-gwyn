@@ -623,7 +623,8 @@ nav ul li {
 }
 
 .btn-wood:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
+    transform: scale(1.05);
     background: linear-gradient(to bottom, #6d4c41, #4e342e); /* Slightly Lighter */
     color: var(--color-accent-gold-bright);
     border-color: var(--color-accent-gold-bright);
@@ -667,7 +668,8 @@ nav ul li {
 
 /* Hover State for Primary */
 .btn-cta:hover {
-    transform: translateY(-2px);
+    /* transform: translateY(-2px); */
+    transform: scale(1.05);
     background: linear-gradient(to bottom, #fff176, #ffd54f); /* Brighter Ingot */
     border-color: #ffca28;
     box-shadow: 
@@ -678,6 +680,7 @@ nav ul li {
 
 .btn-cta:active {
     transform: scale(0.96) translateY(2px);
+    background: linear-gradient(to bottom, var(--color-accent-gold-bright), var(--color-accent-gold)); /* 3D Gold */
     box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
     transition: transform 0.1s ease-in-out;
 }
@@ -689,6 +692,7 @@ nav ul li {
     color: var(--color-accent-gold);
     border: 2px solid var(--color-accent-gold);
     box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.1); /* Inner Depth */
+    text-shadow: none;
 }
 
 /* Hover State for Secondary */
