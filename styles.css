@@ -1127,3 +1127,8 @@ footer {
     font-style: italic;
     text-align: center;
 }
+
+/* Utility Classes */
+.keep-together {
+    display: inline-block;
+}
