@@ -69,9 +69,16 @@ html {
     transition: all 0.3s;
 }
 
-.sticky-sub-nav a:hover {
+.sticky-sub-nav a.active {
     color: var(--color-accent-red);
     border-bottom-color: var(--color-accent-gold);
+}
+
+@media (hover: hover) {
+    .sticky-sub-nav a:hover {
+        color: var(--color-accent-red);
+        border-bottom-color: var(--color-accent-gold);
+    }
 }
 
 /* Global Focus Style for Accessibility & Theme */
@@ -812,6 +819,12 @@ footer {
     color: var(--color-accent-gold);
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
+
+/* .sticky-sub-nav a:hover,
+.sticky-sub-nav a.active {
+    color: var(--color-accent-gold);
+    text-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+} */
 
 .social-links {
     display: flex;
