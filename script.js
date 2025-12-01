@@ -7,17 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
             
-            // Optional: Toggle icon between bars and times (X)
-            const icon = hamburger.querySelector('i');
-            if (icon) {
-                if (navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
+            // Icon animation is handled by CSS via .active class
         });
     }
     // Scroll Spy for Mead Selection Page
