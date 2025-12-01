@@ -312,6 +312,24 @@ nav ul li {
     height: 50vh;
 }
 
+/* Page Specific Hero Backgrounds */
+.hero-events {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/feast_header.png');
+}
+
+.hero-hall {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/the_hall_header.png');
+}
+
+.hero-visit {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/white_oak.png');
+    background-position: center top; /* Adjust for texture */
+}
+
+.hero-mead {
+    background-image: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.9)), url('assets/mead_selection_hero.png');
+}
+
 .hero-content {
     background-color: transparent;
     padding: 2rem 4rem;

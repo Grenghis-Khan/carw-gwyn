@@ -19,7 +19,7 @@ I've reviewed the website in the browser and analyzed the code. Here is my criti
 3. **"Visit Us" Page Depth:**
     - **Issue:** Currently, it overlaps significantly with the "Find the Stag" card on the homepage.
     - **Suggestion:** Make this page a true utility resource. Add sections for **"Parking & Arrival"** (e.g., "Hitch your steed at the lot behind..."), **"Accessibility"**, and a clear **"Reservations"** call-to-action (even if it's just a phone number for now, style it as a "Book Your Table" button).
-4. **Footer "Floating":**
+4. **Footer "Floating" (COMPLETE):**
     - **Issue:** The footer is solid wood color, which is good, but it might feel like it's just "stuck" to the bottom.
     - **Suggestion:** Add a **top border** to the footer that matches the "gold/iron" aesthetic, or a subtle shadow to separate it from the parchment content above.
 
