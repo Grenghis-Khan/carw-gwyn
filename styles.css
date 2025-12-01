@@ -1110,28 +1110,26 @@ footer {
         /* Animation properties */
         max-height: 0;
         overflow: hidden;
-        /* opacity handled on list items to allow background slide */
-        transition: max-height 0.4s ease-in-out, padding 0.4s ease;
+        opacity: 0;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
     }
 
     nav ul.active {
         /* display: flex; Removed as it's always flex now */
         max-height: 100vh; /* Allow it to grow to full height */
+        opacity: 1;
         padding: 2rem 0; /* Restore padding when active */
         height: calc(100vh - 100%); /* Extend to bottom of screen */
-        transition: max-height 0.4s ease-in-out, padding 0.4s ease;
     }
 
     nav ul li {
         width: 200px;
         height: 65px;
         opacity: 0;
-        transition: opacity 0s; /* Instant hide on close */
     }
 
     nav ul.active li {
-        opacity: 1;
-        transition: opacity 0.4s ease-in-out 0.1s; /* Smooth show on open with slight delay */
+        opacity: 1; 
     }
 
     .nav-btn {
