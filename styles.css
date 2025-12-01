@@ -1092,45 +1092,54 @@ footer {
     }
 
     nav ul {
-        display: flex; /* Always flex, hide with max-height */
+        display: flex;
         flex-direction: column;
+        justify-content: start; 
         align-items: center;
         width: 100%;
-        background: var(--wood-dark); /* Dark wood background */
-        /* background-image: url('assets/wood_pattern.png'); Optional: if we want texture */
-        padding: 0; /* Reset padding for animation */
-        position: absolute;
-        top: 100%;
+        background: var(--wood-dark);
+        padding: 0;
+        position: fixed; /* Fixed to cover screen */
+        top: -4rem; /* Offset by header height (approx) */
         left: 0;
-        z-index: 15;
+        z-index: 15; /* Below hamburger (20) */
         border-bottom: 3px solid var(--wood-dark);
         box-shadow: 0 4px 6px rgba(0,0,0,0.5);
         gap: 1.25rem;
-        
         /* Animation properties */
-        max-height: 0;
+        height: 0; /* Animate height */
         overflow: hidden;
-        opacity: 0;
-        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+        transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
     }
 
     nav ul.active {
-        /* display: flex; Removed as it's always flex now */
-        max-height: 100vh; /* Allow it to grow to full height */
-        opacity: 1;
-        padding: 2rem 0; /* Restore padding when active */
-        height: calc(100vh - 100%); /* Extend to bottom of screen */
+        top: 0rem;
+        height: 100vh; /* Full screen */
+        padding-top: 8rem;
+        transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
     }
 
     nav ul li {
         width: 200px;
         height: 65px;
         opacity: 0;
+        /* transform: translateX(-100%); */ /* Slide in from left */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
 
     nav ul.active li {
-        opacity: 1; 
+        opacity: 1;
+        /* transform: translateX(0); */
     }
+
+    /* Staggered delays matching example */
+    /* nav ul.active li:nth-child(1) { transition-delay: 0.2s; }
+    nav ul.active li:nth-child(2) { transition-delay: 0.3s; }
+    nav ul.active li:nth-child(3) { transition-delay: 0.4s; }
+    nav ul.active li:nth-child(4) { transition-delay: 0.5s; }
+    nav ul.active li:nth-child(5) { transition-delay: 0.6s; } */
+
+
 
     .nav-btn {
         align-content: center;
@@ -1143,7 +1152,17 @@ footer {
     }
 
     .nav-logo {
-        display: none; /* Hide the list-item logo on mobile */
+        order: -1; /* Move to top of flex container */
+        align-items: center;
+        margin-bottom: 2rem; /* 2rem space above first link */
+        opacity: 0;
+        transition: opacity 0s; /* Immediate hide on close */
+    }
+    
+    nav ul.active .nav-logo {
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+        transition-delay: 0.3s; /* Wait for menu to slide down */
     }
     
     /* Hide logo in the menu list if it's duplicated, or adjust layout */
