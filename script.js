@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 2. Intersection Observer
+        // console.log('Initializing Scroll Spy. Sections found:', sections.length);
+        
         const observerOptions = {
             root: null,
             rootMargin: '-15% 0px -50% 0px', 
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update ratios
             entries.forEach(entry => {
                 ratios[entry.target.id] = entry.intersectionRatio;
+                // console.log(`Entry update: ${entry.target.id}, ratio: ${entry.intersectionRatio}, isIntersecting: ${entry.isIntersecting}`);
             });
 
             // Find the section with the highest ratio
@@ -64,6 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     bestId = id;
                 }
             }
+            
+            // console.log('Current Ratios:', ratios);
+            // console.log('Best Section:', bestId, 'Max Ratio:', maxRatio);
 
             // Only update if we have a clear winner (avoid flickering at 0)
             if (bestId && maxRatio > 0) {
@@ -74,7 +80,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeLink = document.querySelector(`.sticky-sub-nav a[href="#${bestId}"]`);
                 if (activeLink) {
                     activeLink.classList.add('active');
+                    // console.log('Setting active link:', bestId);
                 }
+            } else {
+                // console.log('No clear winner, keeping current state or clearing if needed.');
             }
         }, observerOptions);
 

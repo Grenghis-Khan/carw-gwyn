@@ -101,6 +101,10 @@ input, textarea, select {
     font-size: 1rem;
 }
 
+textarea {
+    width: 100%;
+}
+
 input:focus, textarea:focus, select:focus {
     outline: 2px solid var(--color-accent-gold);
     outline-offset: 0; /* Inputs look better with outline hugging the border */
@@ -1152,4 +1156,28 @@ footer {
 /* Utility Classes */
 .keep-together {
     display: inline-block;
+}
+
+/* Contact Section Improvements */
+.contact-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    width: 100%;
+}
+
+.contact-form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-form-row input {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .contact-form-row {
+        flex-direction: column;
+        gap: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
 }
