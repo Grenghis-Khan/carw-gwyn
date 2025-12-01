@@ -314,7 +314,7 @@ nav ul li {
 
 /* Page Specific Hero Backgrounds */
 .hero-events {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/feast_header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/events_header.png');
 }
 
 .hero-hall {
@@ -322,12 +322,12 @@ nav ul li {
 }
 
 .hero-visit {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/white_oak.png');
-    background-position: center top; /* Adjust for texture */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/visit_header.png');
+    background-position: center 70%; /* Adjust for centering door */
 }
 
 .hero-mead {
-    background-image: linear-gradient(rgba(44, 24, 16, 0.7), rgba(44, 24, 16, 0.9)), url('assets/mead_selection_hero.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/mead_header.png');
 }
 
 .hero-content {
@@ -445,6 +445,11 @@ nav ul li {
     display: flex;
     flex-direction: column;
     /* transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.card-food .card-border {
+    background: rgba(139, 69, 19, 0.08); /* Warm, subtle brown tint */
+    border-color: var(--wood-light);
 }
 
 /* .card-border:hover {
