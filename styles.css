@@ -191,6 +191,7 @@ header {
     height: 150px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
     transition: transform 0.3s;
+    padding: 0.5rem 0;
 }
 
 .logo:hover {
@@ -1087,12 +1088,13 @@ footer {
     }
 
     .mobile-logo-link {
-        display: block;
+        display: flex;
     }
 
     .mobile-logo-link img {
-        height: 60px; /* Adjust size as needed */
+        height: 70px; /* Adjust size as needed */
         width: auto;
+        padding: 0.38rem 0;
     }
 
     nav ul {
