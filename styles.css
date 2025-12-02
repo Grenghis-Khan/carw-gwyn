@@ -117,7 +117,7 @@ input:focus, textarea:focus, select:focus {
 body {
     font-family: var(--font-body);
     background-color: var(--wood-dark); /* Dark wood background for contrast */
-    background-image: url('assets/light_wood_texture.png'); /* Optional: use texture if available */
+    background-image: url('assets/light_wood_texture.webp'); /* Optional: use texture if available */
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-dark);
@@ -165,7 +165,7 @@ h3 {
 
 /* Textures */
 .wood-texture {
-    background-image: url('assets/light_wood_texture.png');
+    background-image: url('assets/light_wood_texture.webp');
     background-size: cover;
     color: var(--wood-dark);
     border-bottom: 5px solid var(--wood-dark);
@@ -173,7 +173,7 @@ h3 {
 }
 
 .wood-texture-light {
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/light_wood_texture.png');
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/light_wood_texture.webp');
     background-size: cover;
     padding: 0 1rem;
 }
@@ -320,7 +320,7 @@ nav ul li {
     width: 100%; /* Fill the li container */
     display: inline-block; /* Allow width to take effect */
     text-align: center; /* Center text */
-    /* background-image: url('assets/button_iron_oak.png'); */
+    /* background-image: url('assets/button_iron_oak.webp'); */
     /* background-size: 100% 100%; */
     background: linear-gradient(to bottom, #5d4037, #3e2723); /* Wood gradient */
     border: 3px solid #2c2c2c; /* Iron border */
@@ -378,7 +378,7 @@ nav ul li {
 
 /* Hero Section */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero_bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/hero_bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -397,20 +397,20 @@ nav ul li {
 
 /* Page Specific Hero Backgrounds */
 .hero-events {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/events_header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/events_header.webp');
 }
 
 .hero-hall {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/the_hall_header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/the_hall_header.webp');
 }
 
 .hero-visit {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/visit_header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/visit_header.webp');
     background-position: center 70%; /* Adjust for centering door */
 }
 
 .hero-mead {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/mead_header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/mead_header.webp');
 }
 
 .hero-content {
@@ -486,7 +486,7 @@ nav ul li {
 
 /* Parchment Content */
 .parchment-content {
-    background-image: url('assets/parchment_bg.png');
+    background-image: url('assets/parchment_bg.webp');
     /* background-size: 125%; */ /* Cover the whole sheet */
     background-size: cover;
     background-repeat: no-repeat;
@@ -547,7 +547,7 @@ nav ul li {
     position: absolute;
     width: 60px;
     height: 60px;
-    background-image: url('assets/celtic_knot.png');
+    background-image: url('assets/celtic_knot.webp');
     background-size: contain;
     background-repeat: no-repeat;
 }
