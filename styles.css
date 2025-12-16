@@ -895,6 +895,8 @@ footer {
 
 .footer-section.center {
     justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .footer-section.right {
@@ -951,7 +953,11 @@ footer {
 @media (max-width: 768px) {
     .footer-main {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 3rem;
+    }
+
+    .footer-section.center {
+        gap: 1rem;
     }
 
     .footer-section.left,
